@@ -1,7 +1,8 @@
+
+<p id="notice"><%= flash[:notice] %></p>
 <h1>Books</h1>
 
-
-<table >
+<table>
     <tr>
     <th>Title</th>
     <th>Body</th>
@@ -11,13 +12,8 @@
     </tr>
     <% @books.each do |book| %>
     <tr>
-    <td>
-        <span><%= link_to book.title, book_path(book) %></span>
-    </td>
-    <td>
-        <span><%= link_to book.body, book_path(book) %></span>
-       
-    </td>
+    <td><%= book.title %></td>
+    <td><%= book.body %></td>
     <td><%= link_to 'Show', book_path(book) %></td>
     <td><%= link_to "Edit", edit_book_path(book) %></td>
     <td><%= link_to "Destory", destroy_book_path(book.id), method: :delete, "data-confirm" => "Are you sure ?" %></td>
@@ -26,7 +22,7 @@
 </table>
 
 
-<h1>New Book</h1>
+<h2>New Book</h2>
 
 <%= form_for(@book,url:'/books') do |f| %>
 
@@ -40,11 +36,12 @@
   </div>
 <% end %>
 
-<h4>Title</h4>
-<%= f.text_field :title %>
 
-<h4>Body</h4>
-<%= f.text_area :body %>
+<label>Title</label><br/>
+<%= f.text_field :title %><br/>
+
+<label>Body</label><br/>
+<%= f.text_area :body %><br/>
 
 <br/>
 <%= f.submit 'Create Book' %>
