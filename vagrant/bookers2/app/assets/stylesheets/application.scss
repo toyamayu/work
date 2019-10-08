@@ -1,0 +1,118 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap"; 
+
+*{
+    margin:0 auto;
+    padding:0 auto;
+    box-sizing:border-box;
+}
+
+a{
+    text-decoration: none;
+    text-decoration-line: initial;
+    text-decoration-color: initial;
+}
+a:visited{
+    color:#666;
+}
+
+a:hover{
+    background-color: #090909;
+}
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.flash{
+    color:green;
+    margin-bottom:10px;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.body{
+    margin-top: 51px;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+header{
+    background-color: #222;
+    border-color: #090909;
+}
+
+header span{
+    color:white;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+
+.navbar-inverse, .navbar-nav li a {
+    color: #9d9d9d;
+}
+
+.navbar-inverse, .navbar-nav li a :hover{
+    background-color: #222;
+}
+
+header li{
+    background-color:transparent;
+    font-size:13px;
+}
+
+header a:hover{
+    background-color: transparent;
+    color:white;
+}
+
+.btn{
+    color:#666;
+}
+
+.btn-success{
+    color:white;
+}
+
+.btn-primary{
+    color:white;
+}
+
+.field{
+    margin-bottom: 10px;
+}
+
+label{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.actions{
+    margin-bottom: 10px;
+}
